@@ -1,0 +1,25 @@
+{{> _header }}
+{{> _navbar }}
+<div class="page-header">
+    <h1>{{ restaurant.name }}<small>{{{ restaurant.desc }}}</small></h1>
+</div>
+
+    <h3>Namespace</h3>
+    
+        {{ restaurant.namespace }}
+    
+
+    <h3>Name</h3>
+    
+        {{ restaurant.name }}
+    
+
+    <h3>Desc</h3>
+    
+        {{{ restaurant.desc }}}
+    
+
+<a class='btn btn-default btn-sm' href='{{ restaurant.uri }}/edit'>
+    Edit
+</a>
+{{> _footer }}

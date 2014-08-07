@@ -1,0 +1,45 @@
+{{> _header }}
+{{> _navbar }}
+<div class="page-header">
+    <h1>{{ option.name }}<small>{{{ option.desc }}}</small></h1>
+</div>
+
+    <h3>Namespace</h3>
+    
+        {{ option.namespace }}
+    
+
+    <h3>Name</h3>
+    
+        {{ option.name }}
+    
+
+    <h3>Desc</h3>
+    
+        {{{ option.desc }}}
+    
+
+    <h3>Product</h3>
+    
+        {{ option.product }}
+    
+
+    <h3>Carbs</h3>
+    
+        {{ option.carbs }}
+    
+
+    <h3>Calories</h3>
+    
+        {{ option.calories }}
+    
+
+    <h3>Points</h3>
+    
+        {{ option.points }}
+    
+
+<a class='btn btn-default btn-sm' href='{{ option.uri }}/edit'>
+    Edit
+</a>
+{{> _footer }}

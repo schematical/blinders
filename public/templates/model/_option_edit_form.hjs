@@ -1,0 +1,61 @@
+
+
+<form role="form" action='{{ product.uri }}/options/{{ option._id }}' method='POST' enctype="multipart/form-data">
+    
+        
+            <div class="form-group">
+                <label for="namespace">namespace</label>
+                <input name="namespace" type="namespace" class="form-control" id="namespace" placeholder="Enter namespace" value="{{ option.namespace }}">
+            </div>
+        
+    
+        
+            <div class="form-group">
+                <label for="name">name</label>
+                <input name="name" type="name" class="form-control" id="name" placeholder="Enter name" value="{{ option.name }}">
+            </div>
+        
+    
+        
+            <textarea id="desc" name="desc" class="form-control" rows="3">{{ option.desc}}</textarea>
+        
+    
+        
+            {{^ product }}
+            <div class="form-group">
+                <label for="product">product</label>
+                <select id="product" name='product' value='{{ option.product }}'>
+                    {{# products }}
+                        <option {{# _selected }}selected='true'{{/ _selected}} value='{{ _id }}'>{{ name }}</option>
+                    {{/ products }}
+                </select>
+            </div>
+             {{/ product }}
+
+        
+    
+        
+            <div class="form-group">
+                <label for="carbs">carbs</label>
+                <input name="carbs" type="carbs" class="form-control" id="carbs" placeholder="Enter carbs" value="{{ option.carbs }}">
+            </div>
+        
+    
+        
+            <div class="form-group">
+                <label for="calories">calories</label>
+                <input name="calories" type="calories" class="form-control" id="calories" placeholder="Enter calories" value="{{ option.calories }}">
+            </div>
+        
+    
+        
+            <div class="form-group">
+                <label for="points">points</label>
+                <input name="points" type="points" class="form-control" id="points" placeholder="Enter points" value="{{ option.points }}">
+            </div>
+        
+    
+
+
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>

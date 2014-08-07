@@ -1,0 +1,87 @@
+{{> _header }}
+
+{{> _navbar }}
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            {{> _product_edit_form }}
+        </div>
+        <div class="col-md-8 col-md-offset-1">
+            <table class="table">
+                <tr>
+                    
+                        <th>
+                            namespace
+                        </th>
+                    
+                        <th>
+                            name
+                        </th>
+                    
+                        <th>
+                            desc
+                        </th>
+                    
+                        <th>
+                            restaurant
+                        </th>
+                    
+                        <th>
+                            carbs
+                        </th>
+                    
+                        <th>
+                            calories
+                        </th>
+                    
+                        <th>
+                            points
+                        </th>
+                    
+                </tr>
+                {{# products }}
+                    <tr>
+                        
+                            <td>
+                                {{ namespace }}
+                            </td>
+                        
+                            <td>
+                                {{ name }}
+                            </td>
+                        
+                            <td>
+                                {{ desc }}
+                            </td>
+                        
+                            <td>
+                                {{ restaurant }}
+                            </td>
+                        
+                            <td>
+                                {{ carbs }}
+                            </td>
+                        
+                            <td>
+                                {{ calories }}
+                            </td>
+                        
+                            <td>
+                                {{ points }}
+                            </td>
+                        
+                        
+                        <td>
+                            <a class='btn btn-default btn-sm' href='{{ uri }}'>
+                                View
+                            </a>
+                        </td>
+                        
+                    </tr>
+                {{/ products }}
+            </table>
+        </div>
+    </div>
+</div>
+{{> _footer }}
+
