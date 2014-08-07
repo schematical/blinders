@@ -1,7 +1,8 @@
 {
     "app_name":"iraas",
     "frameworks":{
-        "angular":"angular"
+        "angular":"angular",
+        "ionic":"ionic"
     },
     "models":{
         "option":{
