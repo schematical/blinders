@@ -51,11 +51,15 @@ blindersServices.factory(
     [
         '$resource',
         function($resource){
-            return $resource('/restaurants/:restaurant_id', {}, {
+            return $resource('/restaurants/:restaurant_id',
+                {
+                    'restaurant_id':'@restaurant_id'
+                },
+                {
                 query: {
                     method:'GET',
                     params:{
-                        'restaurant_id':'restaurant_id'
+                        //'restaurant_id':'restaurant_id'
                     },
                     isArray:true
                 }

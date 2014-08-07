@@ -59,7 +59,7 @@ angular.module('blinders.controllers', [
 // A simple controller that shows a tapped item's data
 .controller('ProductDetailCtrl', function($scope, $stateParams, ProductService) {
   // "Product" is a service returning mock data (services.js)
-  $scope.pet = ProductService.get($stateParams.product_id);
+  $scope.pet = ProductService.get({ product_id:$stateParams.product_id });
 })
 
 
@@ -75,8 +75,7 @@ angular.module('blinders.controllers', [
 
 
 // A simple controller that shows a tapped item's data
-.controller('RestaurantDetailCtrl', function($scope, $stateParams, RestaurantService) {
-  // "Restaurant" is a service returning mock data (services.js)
-  $scope.pet = RestaurantService.get($stateParams.restaurant_id);
-})
-
+    .controller('RestaurantDetailCtrl', function($scope, $stateParams, RestaurantService) {
+        // "Restaurant" is a service returning mock data (services.js)
+        $scope.restaurant = RestaurantService.get({ restaurant_id:$stateParams.restaurant_id });
+    })
