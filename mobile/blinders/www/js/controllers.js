@@ -5,10 +5,18 @@ angular.module('blinders.controllers', [
         navigator.geolocation.getCurrentPosition(
             function onSuccess(position) {
                 $scope.coords = position.coords;
-                document.location = '/#/tab/restaurants';
+
                 $scope.$apply(function($scope){
                     //console.log($scope);
-                    RestaurantService.get()
+                    RestaurantService.nearby(
+                        $scope.coords,
+                        function(results){
+                            window.njax_bootstrap.restaurants = results;
+                            $scope.restaurants = results;
+                            //alert("hmmm");
+                            document.location = '/#/tab/restaurants';
+                        }
+                    )
                 });
 
             },
@@ -56,10 +64,13 @@ angular.module('blinders.controllers', [
 
 
 
-// A simple controller that fetches a list of data from a service
+
 .controller('RestaurantListCtrl',  function($scope, RestaurantService) {
-  // "Pets" is a service returning mock data (services.js)
-  $scope.restaurant = RestaurantService.get();
+    $scope.restaurants = $scope.restaurants || window.njax_bootstrap.restaurants;
+    console.log($scope.restaurants);
+    if(!$scope.restaurants){
+        $scope.restaurant = RestaurantService.get();
+    }
 })
 
 

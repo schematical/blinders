@@ -124,7 +124,7 @@ angular.module('starter', ['ionic', 'blinders.services', 'blinders.controllers']
     .state('tab.loading', {
       url: '/loading',
       views: {
-          'about-tab': {
+          'pets-tab': {
               templateUrl: 'templates/finding_location.html',
               controller: 'LocationCtrl'
           }
