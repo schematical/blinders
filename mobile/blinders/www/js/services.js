@@ -7,7 +7,7 @@ blindersServices.factory(
     [
         '$resource',
         function($resource){
-            return $resource('/restaurants/:restaurant/products/:product/options/:option_id', {}, {
+            return $resource( '//' + njax_bootstrap.api_url + '/restaurants/:restaurant/products/:product/options/:option_id', {}, {
                 query: {
                     method:'GET',
                     params:{
@@ -29,7 +29,7 @@ blindersServices.factory(
     [
         '$resource',
         function($resource){
-            return $resource('/restaurants/:restaurant/products/:product_id', {}, {
+            return $resource( '//' + njax_bootstrap.api_url + '/restaurants/:restaurant/products/:product_id', {}, {
                 query: {
                     method:'GET',
                     params:{
@@ -51,15 +51,30 @@ blindersServices.factory(
     [
         '$resource',
         function($resource){
-            return $resource('/restaurants/:restaurant_id', {}, {
-                query: {
-                    method:'GET',
-                    params:{
-                        'restaurant_id':'restaurant_id'
+            return $resource('//' + njax_bootstrap.api_url + '/restaurants/:restaurant_id',
+                {
+                    /*'image': "@image",
+                    'cluster_id': "@cluster_id"*/
+                },
+                 {
+                    query: {
+                        method:'GET',
+                        params:{
+                            'restaurant_id':'restaurant_id'
+                        },
+                        isArray:true
                     },
-                    isArray:true
+                    "nearby": {
+                        'url': '//' + njax_bootstrap.api_url + '/restaurants/nearby',
+                        'method': 'GET',
+                        'params': {
+                            latitude:'latitude',
+                            longitude:'longitude'
+                        },
+                        isArray: true
+                    }
                 }
-            });
+            );
         }
     ]
 );

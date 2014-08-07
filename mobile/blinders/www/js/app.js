@@ -10,6 +10,13 @@ angular.module('starter', ['ionic', 'blinders.services', 'blinders.controllers']
 
 .config(function($stateProvider, $urlRouterProvider) {
 
+   if(!window.njax_bootstrap){
+        window.njax_bootstrap = {
+            api_url:'//localhost:3030'
+        }
+   }
+
+
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
