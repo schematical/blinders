@@ -67,15 +67,28 @@ angular.module('blinders.controllers', [
 
 .controller('RestaurantListCtrl',  function($scope, RestaurantService) {
     $scope.restaurants = $scope.restaurants || window.njax_bootstrap.restaurants;
-    console.log($scope.restaurants);
     if(!$scope.restaurants){
         $scope.restaurant = RestaurantService.get();
     }
 })
 
 
-// A simple controller that shows a tapped item's data
+
     .controller('RestaurantDetailCtrl', function($scope, $stateParams, RestaurantService) {
-        // "Restaurant" is a service returning mock data (services.js)
-        $scope.restaurant = RestaurantService.get({ restaurant_id:$stateParams.restaurant_id });
+
+        $scope.restaurants = $scope.restaurants || window.njax_bootstrap.restaurants;
+        for(restaurant_id in $scope.restaurants){
+            //console.log($scope.restaurants[restaurant_id].vanityUrl.substr(1) + '==' + $stateParams.restaurant_id);
+            if(
+                $scope.restaurants[restaurant_id].vanityUrl &&
+                $scope.restaurants[restaurant_id].vanityUrl.substr(1) == $stateParams.restaurant_id
+            ){
+                $scope.restaurant = $scope.restaurants[restaurant_id];
+            }
+        }
+
+        if(!$scope.restaurant){
+            console.log("No restraunt");
+            $scope.restaurant = RestaurantService.get({ restaurant_id:$stateParams.restaurant_id });
+        }
     })
