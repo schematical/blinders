@@ -1,0 +1,21 @@
+
+<ion-view title="'s Information'">
+  <ion-content has-header="true" has-tabs="true">
+
+    <ion-list>
+
+      <ion-item ng-repeat="restaurant in restaurants" type="item-text-wrap" href="#/restaurants/{{restaurant._id}}">
+        <h3>{{restaurant.name}}</h3>
+        
+            <p>{{%= _model.name %>.namespace}}</p>
+        
+            <p>{{%= _model.name %>.name}}</p>
+        
+            <p>{{%= _model.name %>.desc}}</p>
+        
+      </ion-item>
+      
+    </ion-list>
+
+  </ion-content>
+</ion-view>

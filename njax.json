@@ -1,5 +1,5 @@
 {
-    "app_name":"iraas",
+    "app_name":"blinders",
     "frameworks":{
         "angular":"angular",
         "ionic":"ionic"
