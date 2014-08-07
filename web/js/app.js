@@ -15,14 +15,14 @@ angular.module('starter', ['ionic', 'blinders.services', 'blinders.controllers']
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
-      .state('/', {
+     /* .state('/', {
           url: '/',
           views: {
               'about-tab': {
                   templateUrl: 'templates/index.html'
               }
           }
-      })
+      })*/
     .state('tab', {
         url: "/tab",
         abstract: true,
@@ -33,7 +33,7 @@ angular.module('starter', ['ionic', 'blinders.services', 'blinders.controllers']
 
 
 
-    .state('option-list', {
+    .state('tab.option-list', {
       url: '/restaurants/:restaurant/products/:product/options',
       views: {
         'pets-tab': {
@@ -43,7 +43,7 @@ angular.module('starter', ['ionic', 'blinders.services', 'blinders.controllers']
       }
     })
 
-    .state('option-detail', {
+    .state('tab.option-detail', {
       url: '/restaurants/:restaurant/products/:product/options/:option_id',
       views: {
         'pets-tab': {
@@ -55,7 +55,7 @@ angular.module('starter', ['ionic', 'blinders.services', 'blinders.controllers']
 
 
 
-    .state('product-list', {
+    .state('tab.product-list', {
       url: '/restaurants/:restaurant/products',
       views: {
         'pets-tab': {
@@ -65,7 +65,7 @@ angular.module('starter', ['ionic', 'blinders.services', 'blinders.controllers']
       }
     })
 
-    .state('product-detail', {
+    .state('tab.product-detail', {
       url: '/restaurants/:restaurant/products/:product_id',
       views: {
         'pets-tab': {
@@ -77,7 +77,7 @@ angular.module('starter', ['ionic', 'blinders.services', 'blinders.controllers']
 
 
 
-    .state('restaurant-list', {
+    .state('tab.restaurant-list', {
       url: '/restaurants',
       views: {
         'pets-tab': {
@@ -87,7 +87,7 @@ angular.module('starter', ['ionic', 'blinders.services', 'blinders.controllers']
       }
     })
 
-    .state('restaurant-detail', {
+    .state('tab.restaurant-detail', {
       url: '/restaurants/:restaurant_id',
       views: {
         'pets-tab': {
@@ -97,7 +97,7 @@ angular.module('starter', ['ionic', 'blinders.services', 'blinders.controllers']
       }
     })
 
-    .state('about', {
+    .state('tab.about', {
         url: '/about',
         views: {
             'about-tab': {

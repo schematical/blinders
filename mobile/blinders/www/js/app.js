@@ -15,17 +15,70 @@ angular.module('starter', ['ionic', 'blinders.services', 'blinders.controllers']
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
-
-    // setup an abstract state for the tabs directive
+     /* .state('/', {
+          url: '/',
+          views: {
+              'about-tab': {
+                  templateUrl: 'templates/index.html'
+              }
+          }
+      })*/
     .state('tab', {
-      url: "/tab",
-      abstract: true,
-      templateUrl: "templates/tabs.html"
+        url: "/tab",
+        abstract: true,
+        templateUrl: "templates/tabs.html"
     })
 
-    // the pet tab has its own child nav-view and history
-    .state('tab.pet-index', {
-      url: '/pets',
+
+
+
+
+    .state('tab.option-list', {
+      url: '/restaurants/:restaurant/products/:product/options',
+      views: {
+        'pets-tab': {
+          templateUrl: 'templates/option-list.html',
+          controller: 'OptionListCtrl'
+        }
+      }
+    })
+
+    .state('tab.option-detail', {
+      url: '/restaurants/:restaurant/products/:product/options/:option_id',
+      views: {
+        'pets-tab': {
+          templateUrl: 'templates/option-detail.html',
+          controller: 'OptionDetailCtrl'
+        }
+      }
+    })
+
+
+
+    .state('tab.product-list', {
+      url: '/restaurants/:restaurant/products',
+      views: {
+        'pets-tab': {
+          templateUrl: 'templates/product-list.html',
+          controller: 'ProductListCtrl'
+        }
+      }
+    })
+
+    .state('tab.product-detail', {
+      url: '/restaurants/:restaurant/products/:product_id',
+      views: {
+        'pets-tab': {
+          templateUrl: 'templates/product-detail.html',
+          controller: 'ProductDetailCtrl'
+        }
+      }
+    })
+
+
+
+    .state('tab.restaurant-list', {
+      url: '/restaurants',
       views: {
         'pets-tab': {
           templateUrl: 'templates/restaurant-list.html',
@@ -34,36 +87,30 @@ angular.module('starter', ['ionic', 'blinders.services', 'blinders.controllers']
       }
     })
 
-    .state('tab.pet-detail', {
-      url: '/pet/:petId',
+    .state('tab.restaurant-detail', {
+      url: '/restaurants/:restaurant_id',
       views: {
         'pets-tab': {
-          templateUrl: 'templates/pet-detail.html',
-          controller: 'PetDetailCtrl'
-        }
-      }
-    })
-
-    .state('tab.adopt', {
-      url: '/adopt',
-      views: {
-        'adopt-tab': {
-          templateUrl: 'templates/adopt.html'
+          templateUrl: 'templates/restaurant-detail.html',
+          controller: 'RestaurantDetailCtrl'
         }
       }
     })
 
     .state('tab.about', {
-      url: '/about',
-      views: {
-        'about-tab': {
-          templateUrl: 'templates/about.html'
+        url: '/about',
+        views: {
+            'about-tab': {
+                templateUrl: 'templates/about.html'
+            }
         }
-      }
     });
 
+
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/pets');
+  $urlRouterProvider.otherwise('/tab/restaurants');
+
+
 
 });
 
