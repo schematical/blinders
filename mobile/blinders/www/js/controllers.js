@@ -50,16 +50,20 @@ angular.module('blinders.controllers', [
 
 
 // A simple controller that fetches a list of data from a service
-.controller('ProductListCtrl',  function($scope, ProductService) {
-  // "Pets" is a service returning mock data (services.js)
-  $scope.product = ProductService.get();
+.controller('ProductListCtrl',  function($scope, $stateParams, ProductService) {
+    $scope.products = ProductService.get({
+        restaurant: $stateParams.restaurant_id
+    });
 })
 
 
 // A simple controller that shows a tapped item's data
 .controller('ProductDetailCtrl', function($scope, $stateParams, ProductService) {
   // "Product" is a service returning mock data (services.js)
-  $scope.pet = ProductService.get({ product_id:$stateParams.product_id });
+  $scope.product = ProductService.get({
+      restaurant:$stateParams.restaurant_id,
+      product_id:$stateParams.product_id
+  });
 })
 
 
@@ -74,7 +78,7 @@ angular.module('blinders.controllers', [
 
 
 
-    .controller('RestaurantDetailCtrl', function($scope, $stateParams, RestaurantService) {
+    .controller('RestaurantDetailCtrl', function($scope, $stateParams, RestaurantService, ProductService) {
 
         $scope.restaurants = $scope.restaurants || window.njax_bootstrap.restaurants;
         for(restaurant_id in $scope.restaurants){
@@ -88,7 +92,10 @@ angular.module('blinders.controllers', [
         }
 
         if(!$scope.restaurant){
-            console.log("No restraunt");
+
             $scope.restaurant = RestaurantService.get({ restaurant_id:$stateParams.restaurant_id });
         }
+        $scope.products = ProductService.get({
+            restaurant: $stateParams.restaurant_id
+        });
     })

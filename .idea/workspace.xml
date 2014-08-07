@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="212fa344-409f-4239-adf9-bf45220ca5ae" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile/blinders/www/js/app.js" afterPath="$PROJECT_DIR$/mobile/blinders/www/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile/blinders/www/js/controllers.js" afterPath="$PROJECT_DIR$/mobile/blinders/www/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile/blinders/www/templates/restaurant-detail.html" afterPath="$PROJECT_DIR$/mobile/blinders/www/templates/restaurant-detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/routes/index.js" afterPath="$PROJECT_DIR$/lib/routes/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile/blinders/www/js/services.js" afterPath="$PROJECT_DIR$/mobile/blinders/www/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="blinders.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,25 +32,52 @@
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="13" selection-start="308" selection-end="430" vertical-scroll-proportion="0.0" vertical-offset="972" max-vertical-offset="1440">
+            <state line="77" column="23" selection-start="2180" selection-end="2180" vertical-scroll-proportion="0.0" vertical-offset="1123" max-vertical-offset="2322">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="products.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/products.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="57850" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="108">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mobile/blinders/www/js/services.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="34" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.0" vertical-offset="415" max-vertical-offset="1710">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mobile/blinders/www/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="14" selection-start="2608" selection-end="2608" vertical-scroll-proportion="0.0" vertical-offset="1266" max-vertical-offset="1800">
+            <state line="80" column="104" selection-start="2538" selection-end="2538" vertical-scroll-proportion="0.084745765" vertical-offset="1405" max-vertical-offset="1926">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="restaurant-detail.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mobile/blinders/www/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="39" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.0" vertical-offset="1134" max-vertical-offset="2646">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="restaurant-detail.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mobile/blinders/www/templates/restaurant-detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="8" selection-start="241" selection-end="241" vertical-scroll-proportion="0.5413534" vertical-offset="0" max-vertical-offset="399">
+            <state line="12" column="8" selection-start="241" selection-end="241" vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="396">
               <folding />
             </state>
           </provider>
@@ -82,20 +112,20 @@
         <option value="$PROJECT_DIR$/lib/routes/model/restaurant.js" />
         <option value="$PROJECT_DIR$/config.js" />
         <option value="$PROJECT_DIR$/njax.json" />
-        <option value="$PROJECT_DIR$/mobile/blinders/www/js/services.js" />
-        <option value="$PROJECT_DIR$/lib/routes/index.js" />
-        <option value="$PROJECT_DIR$/mobile/blinders/www/js/app.js" />
         <option value="$PROJECT_DIR$/mobile/blinders/www/templates/restaurant-list.html" />
         <option value="$PROJECT_DIR$/web/js/services.js" />
-        <option value="$PROJECT_DIR$/mobile/blinders/www/js/controllers.js" />
         <option value="$PROJECT_DIR$/mobile/blinders/www/templates/restaurant-detail.html" />
+        <option value="$PROJECT_DIR$/mobile/blinders/www/js/services.js" />
+        <option value="$PROJECT_DIR$/mobile/blinders/www/js/app.js" />
+        <option value="$PROJECT_DIR$/lib/routes/index.js" />
+        <option value="$PROJECT_DIR$/mobile/blinders/www/js/controllers.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1301" />
-    <option name="y" value="764" />
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
     <option name="width" value="1301" />
     <option name="height" value="772" />
   </component>
@@ -312,6 +342,54 @@
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blinders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blinders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_gen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blinders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blinders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -384,7 +462,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1301" y="764" width="1301" height="772" extended-state="6" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -646,13 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/blinders/www/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="52" selection-start="2010" selection-end="2024" vertical-scroll-proportion="0.0" vertical-offset="919" max-vertical-offset="1602">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="17" selection-start="226" selection-end="239" vertical-scroll-proportion="0.4225352" vertical-offset="0" max-vertical-offset="426">
@@ -663,13 +734,6 @@
     <entry file="file://$PROJECT_DIR$/mobile/blinders/www/templates/product-list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="23" selection-start="358" selection-end="358" vertical-scroll-proportion="0.51295334" vertical-offset="0" max-vertical-offset="630">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/blinders/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="43" selection-start="2632" selection-end="2652" vertical-scroll-proportion="0.5915493" vertical-offset="1566" max-vertical-offset="2646">
           <folding />
         </state>
       </provider>
@@ -695,23 +759,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/blinders/www/templates/restaurant-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="8" selection-start="241" selection-end="241" vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="396">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/blinders/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="39" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.0" vertical-offset="1134" max-vertical-offset="2646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/routes/model/_gen/product.gen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.5211267" vertical-offset="648" max-vertical-offset="4032">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="57850" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="386">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="308" selection-end="430" vertical-scroll-proportion="0.0" vertical-offset="972" max-vertical-offset="1440">
+        <state line="77" column="23" selection-start="2180" selection-end="2180" vertical-scroll-proportion="0.0" vertical-offset="1123" max-vertical-offset="2322">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/blinders/www/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="34" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.0" vertical-offset="415" max-vertical-offset="1710">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile/blinders/www/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="14" selection-start="2608" selection-end="2608" vertical-scroll-proportion="0.0" vertical-offset="1266" max-vertical-offset="1800">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/blinders/www/templates/restaurant-detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="8" selection-start="241" selection-end="241" vertical-scroll-proportion="0.5413534" vertical-offset="0" max-vertical-offset="399">
+        <state line="80" column="104" selection-start="2538" selection-end="2538" vertical-scroll-proportion="0.084745765" vertical-offset="1405" max-vertical-offset="1926">
           <folding />
         </state>
       </provider>

@@ -29,15 +29,21 @@ blindersServices.factory(
     [
         '$resource',
         function($resource){
-            return $resource( '//' + njax_bootstrap.api_url + '/restaurants/:restaurant/products/:product_id', {}, {
-                query: {
-                    method:'GET',
-                    params:{
-                        'product_id':'product_id'
-                    },
-                    isArray:true
+            return $resource( '//' + njax_bootstrap.api_url + '/restaurants/:restaurant/menu/:product_id',
+                {
+                    'restaurant_id':'@restaurant_id',
+                    'product_id':'@product_id'
+                },
+                {
+                    query: {
+                        method:'GET',
+                        params:{
+
+                        },
+                        isArray:true
+                    }
                 }
-            });
+            );
         }
     ]
 );

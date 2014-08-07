@@ -63,7 +63,7 @@ angular.module('starter', ['ionic', 'blinders.services', 'blinders.controllers']
 
 
     .state('tab.product-list', {
-      url: '/restaurants/:restaurant/products',
+      url: '/restaurants/:restaurant_id/products',
       views: {
         'pets-tab': {
           templateUrl: 'templates/product-list.html',
@@ -73,7 +73,7 @@ angular.module('starter', ['ionic', 'blinders.services', 'blinders.controllers']
     })
 
     .state('tab.product-detail', {
-      url: '/restaurants/:restaurant/products/:product_id',
+      url: '/restaurants/:restaurant_id/products/:product_id',
       views: {
         'pets-tab': {
           templateUrl: 'templates/product-detail.html',
