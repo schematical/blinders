@@ -105,6 +105,14 @@ angular.module('starter', ['ionic', 'blinders.services', 'blinders.controllers']
             }
         }
     })
+      .state('tab.settings', {
+          url: '/settings',
+          views: {
+              'settings-tab': {
+                  templateUrl: 'templates/settings.html'
+              }
+          }
+      })
 
     .state('tab.loading', {
       url: '/loading',

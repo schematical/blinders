@@ -5,8 +5,10 @@ angular.module('blinders.controllers', [
         navigator.geolocation.getCurrentPosition(
             function onSuccess(position) {
                 $scope.coords = position.coords;
+                document.location = '/#/tab/restaurants';
                 $scope.$apply(function($scope){
                     //console.log($scope);
+
                 });
              /*   alert('Latitude: '          + position.coords.latitude          + '\n' +
                     'Longitude: '         + position.coords.longitude         + '\n' +
@@ -22,6 +24,12 @@ angular.module('blinders.controllers', [
                     'message: ' + error.message + '\n');
             }
         );
+})
+
+
+.controller('SettingsCtl',  function($scope, SettingsService) {
+
+    //$scope.option = SettingsService.get();
 })
 
 
