@@ -104,11 +104,21 @@ angular.module('starter', ['ionic', 'blinders.services', 'blinders.controllers']
                 templateUrl: 'templates/about.html'
             }
         }
+    })
+
+    .state('tab.loading', {
+      url: '/loading',
+      views: {
+          'about-tab': {
+              templateUrl: 'templates/finding_location.html',
+              controller: 'LocationCtrl'
+          }
+      }
     });
 
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/restaurants');
+  $urlRouterProvider.otherwise('/tab/loading');
 
 
 
