@@ -57,13 +57,41 @@ angular.module('blinders.controllers', [
 })
 
 
-// A simple controller that shows a tapped item's data
-.controller('ProductDetailCtrl', function($scope, $stateParams, ProductService) {
-  // "Product" is a service returning mock data (services.js)
-  $scope.product = ProductService.get({
-      restaurant:$stateParams.restaurant_id,
-      product_id:$stateParams.product_id
-  });
+
+.controller('ProductDetailCtrl', function($scope, $stateParams, RestaurantService, ProductService, OptionService) {
+
+    $scope.restaurant = $scope.restaurant || window.njax_bootstrap.restaurant;
+    if(!$scope.restaurant){
+        $scope.restaurant = RestaurantService.get({
+            restaurant:$stateParams.restaurant_id
+        });
+    }
+    $scope.products = $scope.products || window.njax_bootstrap.products;
+    if($scope.products){
+        for(var product_id in $scope.products){
+            console.log(product_id + ' == ' + $stateParams.product_id);
+            if(
+                $scope.products[product_id].id &&
+                    $scope.products[product_id].id == $stateParams.product_id
+                ){
+                $scope.product = $scope.products[product_id];
+                njax_bootstrap.product = $scope.product;
+            }
+        }
+    }
+
+
+    if(!$scope.product){
+        $scope.product = ProductService.get({
+            restaurant:$stateParams.restaurant_id,
+            product_id:$stateParams.product_id
+        });
+    }
+    $scope.options = njax_bootstrap.options = OptionService.query({
+        restaurant: $stateParams.restaurant_id,
+        product_id:$stateParams.product_id
+    });
+
 })
 
 
@@ -96,7 +124,7 @@ angular.module('blinders.controllers', [
 
             $scope.restaurant = RestaurantService.get({ restaurant_id:$stateParams.restaurant_id });
         }
-        $scope.products = ProductService.query({
+        $scope.products = njax_bootstrap.products = ProductService.query({
             restaurant: $stateParams.restaurant_id
         });
     })

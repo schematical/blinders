@@ -7,7 +7,8 @@ blindersServices.factory(
     [
         '$resource',
         function($resource){
-            return $resource('/restaurants/:restaurant/products/:product/options/:option_id', {}, {
+            //return $resource('/restaurants/:restaurant/products/:product/options/:option_id', {}, {
+            return $resource('/products/:product/options/:option_id', {}, {
                 query: {
                     method:'GET',
                     params:{
@@ -29,15 +30,21 @@ blindersServices.factory(
     [
         '$resource',
         function($resource){
-            return $resource('/restaurants/:restaurant/products/:product_id', {}, {
-                query: {
-                    method:'GET',
-                    params:{
-                        'product_id':'product_id'
-                    },
-                    isArray:true
+            return $resource(
+                '/restaurants/:restaurant/products/:product_id',
+                {
+                    'product_id':'@product_id'
+                },
+                {
+                    query: {
+                        method:'GET',
+                        params:{
+                            'product_id':'product_id'
+                        },
+                        isArray:true
+                    }
                 }
-            });
+            );
         }
     ]
 );
