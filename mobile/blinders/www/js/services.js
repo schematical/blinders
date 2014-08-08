@@ -7,15 +7,22 @@ blindersServices.factory(
     [
         '$resource',
         function($resource){
-            return $resource( '//' + njax_bootstrap.api_url + '/restaurants/:restaurant/products/:product/options/:option_id', {}, {
-                query: {
-                    method:'GET',
-                    params:{
-                        'option_id':'option_id'
-                    },
-                    isArray:true
+            return $resource(
+                '//' + njax_bootstrap.api_url + '/products/:product_id/options/:option_id',
+                {
+                    'product_id':'@product_id',
+                    'option_id':'@option_id'
+                },
+                {
+                    query: {
+                        method:'GET',
+                        params:{
+                            //'option_id':'option_id'
+                        },
+                        isArray:true
+                    }
                 }
-            });
+            );
         }
     ]
 );

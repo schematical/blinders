@@ -9,7 +9,7 @@
 
     
         <p>{{ product.name }}</p>
-    
+ <!--
         <p>{{ product.desc }}</p>
     
         <p>{{ product.restaurant }}</p>
@@ -18,7 +18,7 @@
     
         <p>{{ product.calories }}</p>
     
-        <p>{{ product.points }}</p>
+        <p>{{ product.points }}</p>-->
 
           <div ng-switch on="video">
               <div ng-switch-when="video.large">
@@ -28,7 +28,35 @@
                   <!-- code to render the regular video block -->
               </div>
           </div>
-    
+
+      <div ng-repeat="optionGroup in options">
+
+          <h3>{{optionGroup.name}}</h3>
+
+          <ion-item ng-repeat="option in optionGroup.options" type="item-text-wrap"> <!--href="#/restaurants/:restaurant/products/:product/options/{{option._id}}"-->
+              <div class="list">
+
+                  <label class="item item-input item-select">
+                      <div class="input-label">
+                          {{option.name}}
+                      </div>
+                      <select>
+                          <option ng-repeat="value in option.values" >{{value.name}}</option>
+                      </select>
+                  </label>
+
+              </div>
+
+
+          </ion-item>
+
+          </ion-list>
+        <hr>
+      </div>
+
+
+
+
     <p><a class="button button-small icon ion-arrow-left-b" href="#//restaurants/:restaurant/products"> All s</a></p>
   </ion-content>
 </ion-view>

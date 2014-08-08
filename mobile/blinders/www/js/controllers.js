@@ -92,6 +92,7 @@ angular.module('blinders.controllers', [
         product_id:$stateParams.product_id
     });
 
+
 })
 
 

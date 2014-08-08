@@ -8,11 +8,17 @@ blindersServices.factory(
         '$resource',
         function($resource){
             //return $resource('/restaurants/:restaurant/products/:product/options/:option_id', {}, {
-            return $resource('/products/:product/options/:option_id', {}, {
+            return $resource(
+                '/products/:product_id/options/:option_id',
+                {
+                    'product_id':'@product_id',
+                    'option_id':'@option_id'
+                },
+                {
                 query: {
                     method:'GET',
                     params:{
-                        'option_id':'option_id'
+                        //'option_id':'option_id'
                     },
                     isArray:true
                 }
@@ -39,7 +45,6 @@ blindersServices.factory(
                     query: {
                         method:'GET',
                         params:{
-                            'product_id':'product_id'
                         },
                         isArray:true
                     }
