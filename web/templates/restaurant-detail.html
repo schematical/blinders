@@ -12,7 +12,33 @@
         <p>{{ restaurant.name }}</p>
     
         <p>{{ restaurant.desc }}</p>
-    
-    <p><a class="button button-small icon ion-arrow-left-b" href="#//restaurants"> All s</a></p>
+
+
+              <ion-list>
+
+                  <ion-item ng-repeat="product in products" type="item-text-wrap" href="#/restaurants/:restaurant/products/{{product._id}}">
+                      <h3>{{product.name}}</h3>
+
+                      <p>{{ product.namespace}}</p>
+
+                      <p>{{ product.name}}</p>
+
+                      <p>{{ product.desc}}</p>
+
+                      <p>{{ product.restaurant}}</p>
+
+                      <p>{{ product.carbs}}</p>
+
+                      <p>{{ product.calories}}</p>
+
+                      <p>{{ product.points}}</p>
+
+                  </ion-item>
+
+              </ion-list>
+
+
+
+      <p><a class="button button-small icon ion-arrow-left-b" href="#/restaurants"> All s</a></p>
   </ion-content>
 </ion-view>

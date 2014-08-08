@@ -88,6 +88,7 @@ angular.module('blinders.controllers', [
                 $scope.restaurants[restaurant_id].vanityUrl.substr(1) == $stateParams.restaurant_id
             ){
                 $scope.restaurant = $scope.restaurants[restaurant_id];
+                njax_bootstrap.restaurant = $scope.restaurant;
             }
         }
 
@@ -95,7 +96,7 @@ angular.module('blinders.controllers', [
 
             $scope.restaurant = RestaurantService.get({ restaurant_id:$stateParams.restaurant_id });
         }
-        $scope.products = ProductService.get({
+        $scope.products = ProductService.query({
             restaurant: $stateParams.restaurant_id
         });
     })

@@ -8,8 +8,19 @@
     
         <p>{{ restaurant.desc }}</p>
         <img src="{{ restaurant.logoUrl}}"/>
-    
-    <p>
+      <ion-list>
+
+          <ion-item ng-repeat="product in products" type="item-text-wrap" href="#/tab/restaurants{{ restaurant.vanityUrl }}/products/{{product.id}}">
+              <h3>{{product.name}}</h3>
+
+
+              <p>{{ product.carbs}} - {{ product.calories}} -{{ product.points}}</p>
+
+          </ion-item>
+
+      </ion-list>
+
+      <p>
         <a class="button button-small icon ion-arrow-left-b" href="#/restaurants "> All Restaurants</a>
     </p>
   </ion-content>
